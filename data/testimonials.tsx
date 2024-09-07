@@ -1,42 +1,44 @@
 export default {
-  title: 'Loved by tech people',
+  title: "Loved by fans ",
   items: [
     {
-      name: 'Eelco Wiersma',
-      description: 'Founder Saas UI',
-      avatar:
-        'https://pbs.twimg.com/profile_images/1470742164024008706/k-eXHtu0_normal.jpg',
+      name: "Mustafa",
+      description: "Football Enthusiast",
+      avatar: "/static/images/man2.png",
       children: (
         <>
-          “With SaaS UI I am able to produce high quality dashboard apps and
-          internal tools without a lot of design skills. The ROI really is
-          amazing.”
+          "Showcasing club-approved digital or physical products on my social
+          media has always been a goal. Apidon makes it effortless to display
+          these unique items and engage with my audience. It&apos;s been a
+          game-changer for sharing and celebrating my fandom."
         </>
       ),
     },
     {
-      name: 'Caroline Yahaya',
-      description: 'Fullstack Developer',
-      avatar: '/static/images/avatar2.jpg',
+      name: "Selim",
+      description: "Art & Design Student",
+      avatar: "/static/images/man2.png",
       children: (
         <>
-          “Saas UI allows me to build beautiful and functional UI super fast.
-          The components are very well thought out and the Next.js starter kit
-          saved me at least 100 hours of work.”
+          "I&apos;ve always wanted to show everyone that I own signed content
+          from my favorite film or author. Apidon has made it simple and
+          exciting to share these special items and connect with other fans who
+          appreciate the same interests.”
         </>
       ),
     },
     {
-      name: 'Alberto Vazquez',
-      description: 'Frontend Engineer',
-      avatar: '/static/images/avatar3.jpg',
+      name: "Deniz",
+      description: "Music Enthusiast",
+      avatar: "/static/images/woman.png",
       children: (
         <>
-          “Saas UI gave us a perfect starting point for our project, having the
-          storybooks already set up with beautifully crafted components and
-          fully mocked pages was a treat.”
+          "I&apos;ve long desired to own exclusive images, videos, or songs from
+          the artists I follow. Apidon has made it possible to own and showcase
+          these special collectibles, deepening my connection with my favorite
+          artists and making it even more personal and engaging."
         </>
       ),
     },
   ],
-}
+};

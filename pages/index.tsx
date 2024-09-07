@@ -1,72 +1,63 @@
-import * as React from "react";
-import type { NextPage } from "next";
-import Image from "next/image";
 import {
-  Container,
   Box,
-  Stack,
-  HStack,
   ButtonGroup,
-  Button,
-  Icon,
+  Container,
   Heading,
-  Text,
-  Wrap,
+  Icon,
+  Image,
+  Stack,
   Tag,
+  Text,
   useClipboard,
-  IconButton,
   VStack,
-  Flex,
+  Wrap,
 } from "@chakra-ui/react";
 import { SEO } from "components/seo/seo";
+import type { NextPage } from "next";
+import * as React from "react";
 
-import { FallInPlace } from "components/motion/fall-in-place";
-import { Hero } from "components/hero";
-import { Link, Br } from "@saas-ui/react";
-import { Em } from "components/typography";
-import { NextjsLogo, ChakraLogo } from "components/logos";
-import {
-  FiArrowRight,
-  FiBox,
-  FiCheck,
-  FiCode,
-  FiCopy,
-  FiFlag,
-  FiGrid,
-  FiLock,
-  FiSearch,
-  FiSliders,
-  FiSmile,
-  FiTerminal,
-  FiThumbsUp,
-  FiToggleLeft,
-  FiTrendingUp,
-  FiUserPlus,
-} from "react-icons/fi";
+import { Br } from "@saas-ui/react";
+import { Faq } from "components/faq";
 import { Features } from "components/features";
 import { BackgroundGradient } from "components/gradients/background-gradient";
-import { Faq } from "components/faq";
+import { Hero } from "components/hero";
+import { FallInPlace } from "components/motion/fall-in-place";
 import { Pricing } from "components/pricing/pricing";
+import { FiArrowRight, FiUsers } from "react-icons/fi";
 
 import { ButtonLink } from "components/button-link/button-link";
 import { Testimonial, Testimonials } from "components/testimonials";
 
 import faq from "data/faq";
-import testimonials from "data/testimonials";
 import pricing from "data/pricing";
+import testimonials from "data/testimonials";
 
 import {
   Highlights,
   HighlightsItem,
   HighlightsTestimonialItem,
 } from "components/highlights";
+import { AiOutlineEye } from "react-icons/ai";
+import {
+  FaBullhorn,
+  FaChartLine,
+  FaCog,
+  FaHandshake,
+  FaLock,
+  FaPaintBrush,
+  FaRegGem,
+  FaShareAlt,
+  FaSlidersH,
+  FaStar,
+  FaStream,
+} from "react-icons/fa";
 
 const Home: NextPage = () => {
   return (
     <Box>
       <SEO
-        title="Saas UI Landingspage"
-        description="Free SaaS landingspage starter kit"
+        title="Apidon • Next-G Fan Experience"
+        description="The magnificent platform that enables users to connect with their idols, buy and showcase exclusive digital collectibles, while providing a seamless social experience."
       />
       <Box>
         <HeroSection />
@@ -97,27 +88,20 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Build beautiful
-                <Br /> software faster
+                The Next Generation
+                <Br /> Fan Experience
               </FallInPlace>
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
-                Saas UI is a <Em>React component library</Em>
-                <Br /> that doesn&apos;t get in your way and helps you <Br />{" "}
-                build intuitive SaaS products with speed.
+                The magnificent platform that enables users to connect with
+                their idols, buy and showcase exclusive digital collectibles,
+                while providing a seamless social experience.
               </FallInPlace>
             }
           >
-            <FallInPlace delay={0.8}>
-              <HStack pt="4" pb="12" spacing="8">
-                <NextjsLogo height="28px" /> <ChakraLogo height="20px" />
-              </HStack>
-
+            <FallInPlace delay={0.8} paddingTop={6}>
               <ButtonGroup spacing={4} alignItems="center">
-                <ButtonLink colorScheme="primary" size="lg" href="/signup">
-                  Sign Up
-                </ButtonLink>
                 <ButtonLink
                   size="lg"
                   href="https://demo.saas-ui.dev"
@@ -135,7 +119,7 @@ const HeroSection: React.FC = () => {
                     />
                   }
                 >
-                  View demo
+                  Join Beta on TestFlight!
                 </ButtonLink>
               </ButtonGroup>
             </FallInPlace>
@@ -152,13 +136,10 @@ const HeroSection: React.FC = () => {
             <FallInPlace delay={1}>
               <Box overflow="hidden" height="100%">
                 <Image
-                  src="/static/screenshots/list.png"
-                  layout="fixed"
-                  width={1200}
-                  height={762}
+                  src="/static/screenshots/apidon_ss.png"
+                  width={600}
                   alt="Screenshot of a ListPage in Saas UI Pro"
-                  quality="75"
-                  priority
+                  borderRadius={20}
                 />
               </Box>
             </FallInPlace>
@@ -174,33 +155,34 @@ const HeroSection: React.FC = () => {
         pt="20"
         features={[
           {
-            title: "Accessible",
-            icon: FiSmile,
-            description: "All components strictly follow WAI-ARIA standards.",
+            title: "Create",
+            icon: FaPaintBrush,
+            description:
+              "Effortlessly design and sell unique digital collectibles, connecting fans with the things they love.",
             iconPosition: "left",
             delay: 0.6,
           },
           {
-            title: "Themable",
-            icon: FiSliders,
+            title: "Showcase",
+            icon: AiOutlineEye,
             description:
-              "Fully customize all components to your brand with theme support and style props.",
+              "Display your favorite digital items on your public profile and express your loyalty to clubs or celebrities",
             iconPosition: "left",
             delay: 0.8,
           },
           {
-            title: "Composable",
-            icon: FiGrid,
+            title: "Connect",
+            icon: FiUsers,
             description:
-              "Compose components to fit your needs and mix them together to create new ones.",
+              "Engage with others through Apidon's social features—follow, like, and share your digital world.",
             iconPosition: "left",
             delay: 1,
           },
           {
-            title: "Productive",
-            icon: FiThumbsUp,
+            title: "Collect",
+            icon: FaRegGem,
             description:
-              "Designed to reduce boilerplate and fully typed, build your product at speed.",
+              "Capture exclusive event-based digital memorabilia, showcasing moments that matter to you.",
             iconPosition: "left",
             delay: 1.1,
           },
@@ -212,94 +194,68 @@ const HeroSection: React.FC = () => {
 };
 
 const HighlightsSection = () => {
-  const { value, onCopy, hasCopied } = useClipboard("yarn add @saas-ui/react");
+  const { value, onCopy, hasCopied } = useClipboard("npm i @saas-ui/react");
 
   return (
     <Highlights>
-      <HighlightsItem colSpan={[1, null, 2]} title="Core components">
+      <HighlightsItem colSpan={[1, null, 2]} title="Built-In Social Media">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
-            Get started for free with <Em>30+ open source components</Em>.
-            Including authentication screens with Clerk, Supabase and Magic.
-            Fully functional forms with React Hook Form. Data tables with React
-            Table.
+            Discover a new way to connect with your favorite celebrities and
+            friends. Apidon unites social interaction and digital collectibles
+            in one platform, making it easier than ever to engage, buy, and
+            showcase your unique digital items.
           </Text>
-
-          <Flex
-            rounded="full"
-            borderWidth="1px"
-            flexDirection="row"
-            alignItems="center"
-            py="1"
-            ps="8"
-            pe="2"
-            bg="primary.900"
-            _dark={{ bg: "gray.900" }}
-          >
-            <Box>
-              <Text color="yellow.400" display="inline">
-                yarn add
-              </Text>{" "}
-              <Text color="cyan.300" display="inline">
-                @saas-ui/react
-              </Text>
-            </Box>
-            <IconButton
-              icon={hasCopied ? <FiCheck /> : <FiCopy />}
-              aria-label="Copy install command"
-              onClick={onCopy}
-              variant="ghost"
-              ms="4"
-              isRound
-              color="white"
-            />
-          </Flex>
         </VStack>
       </HighlightsItem>
-      <HighlightsItem title="Solid foundations">
+      <HighlightsItem title="Effortless Collecting">
         <Text color="muted" fontSize="lg">
-          We don&apos;t like to re-invent the wheel, neither should you. We
-          selected the most productive and established tools in the scene and
-          build Saas UI on top of it.
+          No need for complicated crypto wallets or technical know-how. Apidon
+          simplifies the process, allowing you to purchase, manage, and enjoy
+          digital collectibles with just a few taps.
         </Text>
       </HighlightsItem>
       <HighlightsTestimonialItem
-        name="Renata Alink"
+        name="Yunus Korkmaz"
         description="Founder"
-        avatar="/static/images/avatar.jpg"
+        avatar="/static/images/avatar.jpeg"
         gradient={["pink.200", "purple.500"]}
       >
-        “Saas UI helped us set up a beautiful modern UI in no time. It saved us
-        hundreds of hours in development time and allowed us to focus on
-        business logic for our specific use-case from the start.”
+        "At Apidon, our mission is to revolutionize the way people experience
+        digital collectibles and fan engagement. As the founder of Apidon, I am
+        incredibly proud of what we&apos;ve achieved so far. Our platform is
+        designed to make digital ownership accessible, enjoyable, and
+        straightforward for everyone."
       </HighlightsTestimonialItem>
-      <HighlightsItem
-        colSpan={[1, null, 2]}
-        title="Start your next idea two steps ahead"
-      >
+      <HighlightsItem colSpan={[1, null, 2]} title="Showcase Your Collection">
         <Text color="muted" fontSize="lg">
-          We took care of all your basic frontend needs, so you can start
-          building functionality that makes your product unique.
+          Display your digital collectibles on your profile for the world to
+          see. Apidon allows you to express your unique style and support for
+          your favorite creators, turning your profile into a dynamic showcase
+          of your personal collection.
         </Text>
         <Wrap mt="8">
           {[
-            "authentication",
-            "navigation",
-            "crud",
-            "settings",
-            "multi-tenancy",
-            "layouts",
-            "billing",
-            "a11y testing",
-            "server-side rendering",
-            "documentation",
-            "onboarding",
-            "storybooks",
-            "theming",
-            "upselling",
-            "unit testing",
-            "feature flags",
-            "responsiveness",
+            "collectibles",
+            "sports",
+            "music",
+            "movies",
+            "loyalty",
+            "celebrities",
+            "clubs",
+            "events",
+            "profiles",
+            "showcase",
+            "digital",
+            "fanEngagement",
+            "exclusive",
+            "memorabilia",
+            "inAppPurchases",
+            "community",
+            "create",
+            "follow",
+            "share",
+            "connect",
           ].map((value) => (
             <Tag
               key={value}
@@ -328,16 +284,14 @@ const FeaturesSection = () => {
           textAlign="left"
           as="p"
         >
-          Not your standard
-          <Br /> dashboard template.
+          Effortless <Br /> Fan Engagement
         </Heading>
       }
       description={
         <>
-          Saas UI Pro includes everything you need to build modern frontends.
-          <Br />
-          Use it as a template for your next product or foundation for your
-          design system.
+          Connect with your audience effortlessly. Create and showcase exclusive
+          digital collectibles without any hassle—let us handle the details so
+          you can focus on engaging your fans.
         </>
       }
       align="left"
@@ -345,71 +299,60 @@ const FeaturesSection = () => {
       iconSize={4}
       features={[
         {
-          title: "Components.",
-          icon: FiBox,
+          title: "Easy Creation.",
+          icon: FaCog,
           description:
-            "All premium components are available on a private NPM registery, no more copy pasting and always up-to-date.",
+            "Launch exclusive collectibles without any complicated setup.",
           variant: "inline",
         },
         {
-          title: "Starterkits.",
-          icon: FiLock,
-          description:
-            "Example apps in Next.JS, Electron. Including authentication, billing, example pages, everything you need to get started FAST.",
+          title: "Instant Reach.",
+          icon: FaBullhorn,
+          description: "Connect directly with your fans through our platform.",
           variant: "inline",
         },
         {
-          title: "Documentation.",
-          icon: FiSearch,
-          description:
-            "Extensively documented, including storybooks, best practices, use-cases and examples.",
+          title: "Exclusive Items.",
+          icon: FaStar,
+          description: "Offer unique, limited-edition content that stands out.",
           variant: "inline",
         },
         {
-          title: "Onboarding.",
-          icon: FiUserPlus,
-          description:
-            "Add user onboarding flows, like tours, hints and inline documentation without breaking a sweat.",
+          title: "Customizable.",
+          icon: FaSlidersH,
+          description: "Personalize your collectibles to match your brand.",
           variant: "inline",
         },
         {
-          title: "Feature flags.",
-          icon: FiFlag,
+          title: "Integrated Sharing.",
+          icon: FaShareAlt,
           description:
-            "Implement feature toggles for your billing plans with easy to use hooks. Connect Flagsmith, or other remote config services once you're ready.",
+            "Effortlessly share and interact through built-in social features.",
           variant: "inline",
         },
         {
-          title: "Upselling.",
-          icon: FiTrendingUp,
-          description:
-            "Components and hooks for upgrade flows designed to make upgrading inside your app frictionless.",
+          title: "Managed Security.",
+          icon: FaLock,
+          description: "We handle all the technical details and security.",
           variant: "inline",
         },
         {
-          title: "Themes.",
-          icon: FiToggleLeft,
+          title: "Fan Connection.",
+          icon: FaHandshake,
           description:
-            "Includes multiple themes with darkmode support, always have the perfect starting point for your next project.",
+            "Engage deeply with your audience through interactive items.",
           variant: "inline",
         },
         {
-          title: "Generators.",
-          icon: FiTerminal,
-          description:
-            "Extend your design system while maintaininig code quality and consistency with built-in generators.",
+          title: "Streamlined Process.",
+          icon: FaStream,
+          description: "Enjoy a seamless experience with no technical hassles.",
           variant: "inline",
         },
         {
-          title: "Monorepo.",
-          icon: FiCode,
-          description: (
-            <>
-              All code is available as packages in a high-performance{" "}
-              <Link href="https://turborepo.com">Turborepo</Link>, you have full
-              control to modify and adjust it to your workflow.
-            </>
-          ),
+          title: "Performance Insights.",
+          icon: FaChartLine,
+          description: "Get valuable insights on fan engagement success.",
           variant: "inline",
         },
       ]}
@@ -468,9 +411,8 @@ export async function getStaticProps() {
   return {
     props: {
       announcement: {
-        title: "Support us by becoming a stargazer! 🚀 ",
-        description:
-          '<img src="https://img.shields.io/github/stars/saas-js/saas-ui.svg?style=social&label=Star" />',
+        title: "🚀 Apidon Public Beta is Now Live! 🚀",
+        description: "Join Now!",
         href: "https://github.com/saas-js/saas-ui",
         action: false,
       },

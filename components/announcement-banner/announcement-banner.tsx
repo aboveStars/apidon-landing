@@ -86,6 +86,7 @@ export const AnnouncementBanner: React.FC<AnnouncementBannerProps> = (
                   {title}
                 </BannerTitle>
                 <BannerDescription
+                textDecoration="underline"
                   display={{ base: "none", md: "block" }}
                   dangerouslySetInnerHTML={{ __html: description }}
                 />
