@@ -31,8 +31,7 @@ const siteConfig = {
   footer: {
     copyright: (
       <>
-        Built by{" "}
-        <Link href="https://twitter.com/Pagebakers">Apidon Team with ♥️</Link>
+        Made with ♥️ in Istanbul.
       </>
     ),
     links: [

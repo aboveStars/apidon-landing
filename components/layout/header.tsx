@@ -47,7 +47,7 @@ export const Header = (props: HeaderProps) => {
     >
       <Container maxW="container.2xl" px="8" py="4">
         <Flex width="full" justifyContent={"space-between"}>
-          <Flex alignItems="center" gap={3}>
+          <Flex alignItems="center" gap={3} cursor="pointer">
             <Image
               onClick={(e) => {
                 if (window.location.pathname === "/") {
@@ -61,13 +61,12 @@ export const Header = (props: HeaderProps) => {
               }}
               src="/static/images/apidon_logo.png"
               aspectRatio={1}
-              width={35}
+              width={33}
             />
             <Text fontSize={18} fontWeight={700}>
               APIDON
             </Text>
           </Flex>
-
           <Navigation />
         </Flex>
       </Container>

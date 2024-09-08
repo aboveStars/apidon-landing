@@ -8,7 +8,6 @@ import {
   Stack,
   Tag,
   Text,
-  useClipboard,
   VStack,
   Wrap,
 } from "@chakra-ui/react";
@@ -104,7 +103,7 @@ const HeroSection: React.FC = () => {
               <ButtonGroup spacing={4} alignItems="center">
                 <ButtonLink
                   size="lg"
-                  href="https://demo.saas-ui.dev"
+                  href={process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL || ""}
                   variant="outline"
                   rightIcon={
                     <Icon
@@ -194,8 +193,6 @@ const HeroSection: React.FC = () => {
 };
 
 const HighlightsSection = () => {
-  const { value, onCopy, hasCopied } = useClipboard("npm i @saas-ui/react");
-
   return (
     <Highlights>
       <HighlightsItem colSpan={[1, null, 2]} title="Built-In Social Media">
@@ -413,7 +410,7 @@ export async function getStaticProps() {
       announcement: {
         title: "🚀 Apidon Public Beta is Now Live! 🚀",
         description: "Join Now!",
-        href: "https://github.com/saas-js/saas-ui",
+        href: process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL,
         action: false,
       },
     },

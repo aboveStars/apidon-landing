@@ -1,114 +1,92 @@
-import { HStack, Text } from '@chakra-ui/react'
-
 export default {
-  title: 'Pricing for every stage',
+  title: "Pricing for every stage",
   description:
-    'Pay once and get life-time access to our high quality components.',
+    "Pay once and get life-time access to our high quality components.",
   plans: [
     {
-      id: 'oss',
-      title: 'Open Source',
-      description: 'Basic compoents, perfect to get started.',
-      price: 'Free',
+      id: "basic",
+      title: "Basic",
+      description:
+        "Start your digital collecting journey and explore Apidon's features.",
+      price: "Free",
       features: [
         {
-          title: 'MIT License',
+          title: "Endless Inventory",
         },
         {
-          title: 'Authentication (Clerk/Supabase/Magic)',
+          title: "Community Hub",
         },
         {
-          title: 'Form (react-hook-form)',
+          title: "Instant Gallery",
         },
         {
-          title: 'Modals manager',
+          title: "5 Collectible Creation Limit",
         },
         {
-          title: 'Hotkeys',
-        },
-        {
-          title: 'Web3 components',
-        },
-        {
-          title: 'And much more...',
+          title: "10 Stocks Setting Limit",
         },
       ],
       action: {
-        href: '#',
+        label: "Join Beta",
+        href: process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL || "",
       },
     },
     {
-      id: 'bootstrap',
-      title: 'Bootstrap',
-      description: 'Complete frontend stack for bootstrappers and small teams.',
-      price: 'Free',
+      id: "creator",
+      title: "Creator",
+      description:
+        "Unleash your creativity and experience Apidon's premium benefits.",
+      price: "$30/Month",
       isRecommended: true,
       features: [
         {
-          title: 'One project',
+          title: "Endless Inventory",
         },
         {
-          title: 'One developer',
+          title: "Community Hub",
         },
         {
-          title: 'Advanced components',
+          title: "Instant Gallery",
         },
         {
-          title: 'Multiple themes',
+          title: "50 Collectible Creation Limit",
         },
         {
-          title: 'Next.js and Electron boilerplates',
-        },
-        {
-          title: 'Private discord community',
-        },
-        {
-          title: '1 year of updates',
-        },
-        null,
-        {
-          title: 'Private beta access',
-          iconColor: 'green.500',
+          title: "100 Stocks Setting Limit",
         },
       ],
       action: {
-        href: 'https://appulse.gumroad.com/l/saas-ui-pro-pre-order?variant=Single%20license',
+        label: "Join Beta",
+        href: process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL || "",
       },
     },
     {
-      id: 'startup',
-      title: 'Startup',
-      description: 'Unlimited license for growing teams.',
-      price: (
-        <HStack>
-          <Text textDecoration="line-through" fontSize="sm" color="gray.400">
-            €999,-
-          </Text>
-          <Text>€499,-</Text>
-        </HStack>
-      ),
+      id: "visionary",
+      title: "Visionary",
+      description:
+        "Enjoy unlimited creativity, exclusive content, and VIP perks of Apidon.",
+      price: "$50/Month",
       features: [
         {
-          title: 'Unlimited projects',
+          title: "Endless Inventory",
         },
         {
-          title: 'Unlimited developers',
+          title: "Community Hub",
         },
         {
-          title: '1 year of updates',
+          title: "Instant Gallery",
         },
         {
-          title: 'Everything from Bootstrap',
+          title: "100 Collectible Creation Limit",
         },
-        null,
         {
-          title: 'Private beta access',
-          iconColor: 'green.500',
+          title: "1000 Stocks Setting Limit",
         },
       ],
       action: {
-        href: 'https://appulse.gumroad.com/l/saas-ui-pro-pre-order?variant=Unlimited%20license',
+        label: "Join Beta",
+        href: process.env.NEXT_PUBLIC_APPLE_TESTFLIGHT_URL || "",
       },
     },
   ],
-}
+};

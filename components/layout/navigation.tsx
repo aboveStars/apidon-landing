@@ -8,7 +8,6 @@ import { NavLink } from "components/nav-link";
 import { useScrollSpy } from "hooks/use-scrollspy";
 
 import { useDisclosure, useUpdateEffect } from "@chakra-ui/react";
-import { MobileNavButton, MobileNavContent } from "components/mobile-nav";
 
 import ThemeToggle from "./theme-toggle";
 
@@ -46,14 +45,6 @@ const Navigation: React.FC = () => {
       })}
 
       <ThemeToggle />
-
-      <MobileNavButton
-        ref={mobileNavBtnRef}
-        aria-label="Open Menu"
-        onClick={mobileNav.onOpen}
-      />
-
-      <MobileNavContent isOpen={mobileNav.isOpen} onClose={mobileNav.onClose} />
     </HStack>
   );
 };
