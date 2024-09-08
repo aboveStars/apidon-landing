@@ -10,7 +10,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-import { Logo } from "./logo";
 import { useScroll } from "framer-motion";
 import Navigation from "./navigation";
 
