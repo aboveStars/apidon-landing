@@ -79,8 +79,13 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container maxW="container.xl" height="100vh" pt={{ base: 24, lg: 60 }} pb={[0, 40]}>
-        <Stack direction={{ base: "column", lg: "row" }} alignItems="center">
+      <Container
+        maxW="container.xl"
+        height="100vh"
+        pt={{ base: 24, lg: 60 }}
+        alignContent="center"
+      >
+        <Stack direction={{ base: "column", lg: "row" }}>
           <Hero
             id="home"
             justifyContent="flex-start"
@@ -194,7 +199,7 @@ const HeroSection: React.FC = () => {
 
 const HighlightsSection = () => {
   return (
-    <Highlights paddingY={[10, "unset"]}>
+    <Highlights paddingY={[10, 20]}>
       <HighlightsItem colSpan={[1, null, 2]} title="Built-In Social Media">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
@@ -273,7 +278,7 @@ const HighlightsSection = () => {
 const FeaturesSection = () => {
   return (
     <Features
-      paddingY={[10, "unset"]}
+      paddingY={[10, 20]}
       id="features"
       title={
         <Heading
@@ -372,7 +377,7 @@ const TestimonialsSection = () => {
 
   return (
     <Testimonials
-      paddingY={[10, "unset"]}
+      paddingY={[10, 20]}
       title={testimonials.title}
       columns={[1, 2, 3]}
       innerWidth="container.xl"
@@ -392,7 +397,7 @@ const TestimonialsSection = () => {
 
 const PricingSection = () => {
   return (
-    <Pricing paddingY={[10, "unset"]} {...pricing}>
+    <Pricing paddingY={[10, 20]} {...pricing}>
       <Text p="8" textAlign="center" color="muted">
         VAT may be applicable depending on your location.
       </Text>
@@ -401,7 +406,7 @@ const PricingSection = () => {
 };
 
 const FaqSection = () => {
-  return <Faq paddingY={[10, "unset"]} {...faq} />;
+  return <Faq paddingY={[10, 20]} {...faq} />;
 };
 
 export default Home;
