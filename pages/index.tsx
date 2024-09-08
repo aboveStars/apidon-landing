@@ -79,12 +79,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container
-        maxW="container.xl"
-        height="100vh"
-        pt={{ base: 24, lg: 60 }}
-        alignContent="center"
-      >
+      <Container maxW="container.xl" pt={{ base: 24, lg: 60 }} pb={[0, 40]}>
         <Stack direction={{ base: "column", lg: "row" }}>
           <Hero
             id="home"
