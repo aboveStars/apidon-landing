@@ -1,4 +1,3 @@
-import { Link } from "@saas-ui/react";
 import { NextSeoProps } from "next-seo";
 import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import { Logo } from "./logo";
@@ -9,6 +8,10 @@ const siteConfig = {
     title: "Apidon • Next-G Fan Experience",
     description:
       "The magnificent platform that enables users to connect with their idols, buy and showcase exclusive digital collectibles, while providing a seamless social experience.",
+    openGraph: {
+      type: "website",
+      images: [{ url: "/static/opengraph/og.png" }],
+    },
   } as NextSeoProps,
   termsUrl: "#",
   privacyUrl: "#",
@@ -29,11 +32,7 @@ const siteConfig = {
     ],
   },
   footer: {
-    copyright: (
-      <>
-        Made with ♥️ in Istanbul.
-      </>
-    ),
+    copyright: <>Made with ♥️ in Istanbul.</>,
     links: [
       {
         href: "mailto:contact@apidon.com",
