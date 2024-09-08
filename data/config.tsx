@@ -10,7 +10,7 @@ const siteConfig = {
       "The magnificent platform that enables users to connect with their idols, buy and showcase exclusive digital collectibles, while providing a seamless social experience.",
     openGraph: {
       type: "website",
-      images: [{ url: "https:apidon.com/static/opengraph/og.png" }],
+      images: [{ url: "https://www.apidon.com/static/opengraph/og.png" }],
     },
   } as NextSeoProps,
   termsUrl: "#",
