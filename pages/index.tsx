@@ -79,7 +79,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container maxW="container.xl" pt={{ base: 40, lg: 60 }} pb="40">
+      <Container maxW="container.xl" height="100vh" pt={{ base: 24, lg: 60 }} pb={[0, 40]}>
         <Stack direction={{ base: "column", lg: "row" }} alignItems="center">
           <Hero
             id="home"
@@ -151,7 +151,7 @@ const HeroSection: React.FC = () => {
         columns={[1, 2, 4]}
         iconSize={4}
         innerWidth="container.xl"
-        pt="20"
+        pt={20}
         features={[
           {
             title: "Create",
@@ -194,7 +194,7 @@ const HeroSection: React.FC = () => {
 
 const HighlightsSection = () => {
   return (
-    <Highlights>
+    <Highlights paddingY={[10, "unset"]}>
       <HighlightsItem colSpan={[1, null, 2]} title="Built-In Social Media">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
@@ -218,11 +218,11 @@ const HighlightsSection = () => {
         avatar="/static/images/avatar.jpeg"
         gradient={["pink.200", "purple.500"]}
       >
-        &quot;At Apidon, our mission is to revolutionize the way people experience
-        digital collectibles and fan engagement. As the founder of Apidon, I am
-        incredibly proud of what we&apos;ve achieved so far. Our platform is
-        designed to make digital ownership accessible, enjoyable, and
-        straightforward for everyone.&quot;
+        &quot;At Apidon, our mission is to revolutionize the way people
+        experience digital collectibles and fan engagement. As the founder of
+        Apidon, I am incredibly proud of what we&apos;ve achieved so far. Our
+        platform is designed to make digital ownership accessible, enjoyable,
+        and straightforward for everyone.&quot;
       </HighlightsTestimonialItem>
       <HighlightsItem colSpan={[1, null, 2]} title="Showcase Your Collection">
         <Text color="muted" fontSize="lg">
@@ -273,6 +273,7 @@ const HighlightsSection = () => {
 const FeaturesSection = () => {
   return (
     <Features
+      paddingY={[10, "unset"]}
       id="features"
       title={
         <Heading
@@ -371,6 +372,7 @@ const TestimonialsSection = () => {
 
   return (
     <Testimonials
+      paddingY={[10, "unset"]}
       title={testimonials.title}
       columns={[1, 2, 3]}
       innerWidth="container.xl"
@@ -390,7 +392,7 @@ const TestimonialsSection = () => {
 
 const PricingSection = () => {
   return (
-    <Pricing {...pricing}>
+    <Pricing paddingY={[10, "unset"]} {...pricing}>
       <Text p="8" textAlign="center" color="muted">
         VAT may be applicable depending on your location.
       </Text>
@@ -399,7 +401,7 @@ const PricingSection = () => {
 };
 
 const FaqSection = () => {
-  return <Faq {...faq} />;
+  return <Faq paddingY={[10, "unset"]} {...faq} />;
 };
 
 export default Home;
