@@ -218,11 +218,11 @@ const HighlightsSection = () => {
         avatar="/static/images/avatar.jpeg"
         gradient={["pink.200", "purple.500"]}
       >
-        "At Apidon, our mission is to revolutionize the way people experience
+        &quot;At Apidon, our mission is to revolutionize the way people experience
         digital collectibles and fan engagement. As the founder of Apidon, I am
         incredibly proud of what we&apos;ve achieved so far. Our platform is
         designed to make digital ownership accessible, enjoyable, and
-        straightforward for everyone."
+        straightforward for everyone.&quot;
       </HighlightsTestimonialItem>
       <HighlightsItem colSpan={[1, null, 2]} title="Showcase Your Collection">
         <Text color="muted" fontSize="lg">
