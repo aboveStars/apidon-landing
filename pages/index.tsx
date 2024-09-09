@@ -135,8 +135,8 @@ const HeroSection: React.FC = () => {
             <FallInPlace delay={1}>
               <Box overflow="hidden" height="100%">
                 <Image
-                  src="/static/screenshots/apidon_ss.png"
-                  width={600}
+                  src="/static/screenshots/apidon_ss2.webp"
+                  width="600px"
                   alt="Screenshot of a ListPage in Saas UI Pro"
                   borderRadius={20}
                 />
