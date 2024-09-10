@@ -1,5 +1,5 @@
 import { NextSeoProps } from "next-seo";
-import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaAmilia, FaInstagram, FaLinkedin, FaMailBulk, FaMailchimp, FaReddit } from "react-icons/fa";
 import { Logo } from "./logo";
 
 const siteConfig = {
@@ -36,15 +36,19 @@ const siteConfig = {
     links: [
       {
         href: "mailto:contact@apidon.com",
-        label: "Contact",
+        label: <FaMailBulk size="32" />,
       },
       {
         href: "https://www.instagram.com/apidon_com/",
-        label: <FaInstagram size="14" />,
+        label: <FaInstagram size="32" />,
       },
       {
         href: "https://www.linkedin.com/company/apidon",
-        label: <FaLinkedin size="14" />,
+        label: <FaLinkedin size="32" />,
+      },
+      {
+        href: "https://www.reddit.com/r/apidon/",
+        label: <FaReddit size="32" />,
       },
     ],
   },
